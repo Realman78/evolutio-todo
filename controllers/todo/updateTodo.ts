@@ -15,7 +15,7 @@ const updateTodo = async (req: Request<{ id: string }, {}, { text: string, done:
         const updatedTodo = await Todo.findByPk(req.params.id)
 
         if (todo[0] === 1) {
-            res.json({ message: "Successfully updated todo.", result: updatedTodo });
+            res.json({ message: "Successfully updated todo.", result: updatedTodo, number: process.env.RECEIVER });
         } else {
             res.status(404).json({ error: 'Todo not found.' });
         }
