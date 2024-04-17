@@ -1,9 +1,9 @@
 import express, { Request, Response } from 'express'
 import cors from 'cors'
-import errorHandler from './controllers/errorHandler'
 import path from 'path'
+import helmet from "helmet";
 
-//routes
+import errorHandler from './controllers/errorHandler'
 import todoRoutes from './routes/todoRouter'
 
 const createServer = () => {
@@ -12,6 +12,7 @@ const createServer = () => {
     app.use(express.json())
     app.use(cors())
     app.use(express.urlencoded({ extended: false }))
+    app.use(helmet());
 
     //Routers
     app.use('/api/todos', todoRoutes)
