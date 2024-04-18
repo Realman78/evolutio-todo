@@ -1,7 +1,9 @@
 # Evolutio todo
 
-## API documentation
-API documentation is located on **localhost:8080/api-docs**
+## API documentation & paths
+Frontend path: **localhost:8080/**  
+Backend path prefix: **localhost:8080/api/\***  
+API documentation is located on **localhost:8080/api-docs**  
 
 ## Running the app
 ### Using docker (recommended)
