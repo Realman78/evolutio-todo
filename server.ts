@@ -6,7 +6,7 @@ import helmet from "helmet";
 import errorHandler from './controllers/errorHandler'
 import todoRoutes from './routes/todoRouter'
 
-const createServer = () => {
+const createServer = (): express.Express => {
     const app = express()
 
     app.use(express.json())
@@ -25,7 +25,7 @@ const createServer = () => {
 
     app.use(express.static(path.join(__dirname, '..', 'build')));
 
-    app.get('*', (req, res) => {
+    app.get('*', (req: Request, res: Response) => {
       res.sendFile(path.resolve(__dirname, '..', 'build', 'index.html'));
     });
 
