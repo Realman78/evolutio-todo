@@ -24,6 +24,10 @@ Add env variables:
 
 > yarn start
 
+
+## App testing
+> yarn test
+
 ## Frontend app usage tutorial:
 
 - Adding a new todo -> insert the text into the input element and press Enter or click add.
