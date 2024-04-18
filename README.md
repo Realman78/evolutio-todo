@@ -4,12 +4,22 @@
 API documentation is located on **localhost:8080/api-docs**
 
 ## Running the app
-### Using docker
+### Using docker (recommended)
 > docker pull realman78/evolutio-project:latest
 
 > docker run -p 8080:8080 -e "INFOBIP_BASE_URL=infobip_base_url" -e "INFOBIP_API_KEY=infobip_api_key" -e "SENDER=sender_name" -e "RECEIVER=receiver_number" --name evolutio-project realman78/evolutio-project:latest
 
 ### Using code from github
+
+Add env variables:
+- INFOBIP_BASE_URL
+- INFOBIP_API_KEY
+- SENDER (default is evolutio team)
+- RECEIVER
+- PORT (default is 8080)
+- NODE_ENV (default is dev)
+
+
 > yarn install
 
 > yarn start
